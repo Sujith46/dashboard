@@ -1,0 +1,49 @@
+$drawerPrimaryColor : #3B3A53;
+$drawerSecondaryColor : #43425D;
+$drawerFontColor : white;
+$borderColor : #A3A0FB;
+
+%iconsStyle {
+  content: "";
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.6rem;
+  margin-top: 0.5em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Drawer {
+    background-color: $drawerPrimaryColor;
+    color: $drawerFontColor;
+    flex: 1;
+    // padding: 1em;
+    &__Title {
+        font-size: 15px;
+        letter-spacing: 3px;
+        padding: 1em;
+    }
+    &__Navigation {
+        background-color: $drawerSecondaryColor;
+        list-style-type: none;
+        // padding: 1em;
+    }
+    .Navigation--item {
+        padding: 1em 0;
+    }
+    .Navigation {
+        &__Home {
+            padding: 1em;
+            &::before {
+                @extend %iconsStyle;
+                background-image: url("../../images/home.png");
+            }
+            &:hover {
+                background-color: $drawerPrimaryColor;
+                border-left: 4px solid $borderColor;
+            }
+        }
+    }
+}
