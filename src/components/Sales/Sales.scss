@@ -1,0 +1,23 @@
+.Sales {
+  background-color: white;
+  padding: 1.4em;
+  &__Header {
+    margin-bottom: 2em;
+  }
+  &__Data {
+    ul {
+      list-style-type: none;
+      li {
+        display: flex;
+        &::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          border: 2px solid violet;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

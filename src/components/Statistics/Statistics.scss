@@ -1,0 +1,15 @@
+.Statistics {
+  background-color: white;
+  padding: 1.4em;
+  margin-right: 0.8em;
+  &__Header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  .DateOption {
+    border: 1px solid #d0d0d0;
+    padding: 0.4em;
+    border-radius: 3px;
+  }
+}
