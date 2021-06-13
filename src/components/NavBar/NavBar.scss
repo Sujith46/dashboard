@@ -1,0 +1,76 @@
+$navigationPrimaryColor : #3B3A53;
+$navigationSecondaryColor : white;
+
+%iconStyleCustom {
+    content: "";
+    display: inline-flex;
+    width: 20px;
+    height: 18px;
+    margin-right: 0.6rem;
+    background-image: url("../../images/icons.png");
+    background-repeat: no-repeat;
+}
+
+%menuStyle {
+    display: inline-block;
+    width: 36px;
+    height: 18px;
+    margin: 0 1.2em;
+    background-image: url("../../images/icons.png");
+    background-repeat: no-repeat;
+}
+
+.NavigationContainer {
+    background-color: $navigationPrimaryColor;
+    .Navigation {
+        display: flex;
+        align-items: center;
+        background-color: $navigationSecondaryColor;
+        border-top-left-radius: 20px;
+        padding: 1.6em 1.4em;
+        .NavigationSearch {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            p {
+                color: #4D4F5C;
+            }
+            &__Icon{
+                @extend %iconStyleCustom;
+                background-position: -142px -36px;
+            }
+        }
+    }
+    .NavigationRight {
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 13px;
+        }
+        &__Account {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #eaeaea;
+            padding-left: 1em;
+        }
+        &__Notification {
+            @extend %iconStyleCustom;
+            background-position: -173px -40px;
+        }
+        &__DownArrow {
+            @extend %iconStyleCustom;
+            background-position: -207px -38px;
+        }
+        &__Avatar {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.Navigation__MenuIcon {
+    @extend %menuStyle;
+    background-position: -370px 0px;
+}
