@@ -11,8 +11,8 @@ function Sales() {
             <h3 className="Sales__Header">Sales Distribution</h3>
             <PieChart />
             <div className="Sales__Data">
-                <ul>
-                    {SalesData.map((value, index )=> <li key={index}><div>{value.name}</div><span>{value.value}</span></li>)}
+                <ul className="Sale">
+                    {SalesData.map((value, index )=> <li className={`Sale__${index}`} key={index}><div>{value.name}</div><span>{value.value}</span></li>)}
                 </ul>
             </div>
         </div>

@@ -1,21 +1,61 @@
+%listStyle{
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: 0.2em;
+  display: inline-block;
+  border-radius: 50%;
+}
+
 .Sales {
   background-color: white;
   padding: 1.4em;
+  margin-right: 0.8em;
   &__Header {
     margin-bottom: 2em;
   }
   &__Data {
+    margin-top: 2.4em;
+    border-top: 1px solid #CECFD0;
     ul {
       list-style-type: none;
       li {
-        display: flex;
-        &::before {
-          content: "";
-          width: 10px;
-          height: 10px;
-          display: inline-block;
-          border: 2px solid violet;
-          border-radius: 50%;
+        display: inline-flex;
+        margin: 0.4em;
+        align-items: center;
+        div {
+          margin: 0 0.4em;
+          font-size: 15px;
+        }
+        span {
+          color: #4D4F5C;
+          font-size: 13px;
+        }
+      }
+      .Sale {
+        &__0 {
+          &::before {
+            @extend %listStyle;
+            border: 3px solid #55D8FE;
+          }
+        }
+        &__1 {
+            &::before {
+            @extend %listStyle;
+            border: 3px solid #FFDA83;
+          }
+        }
+        &__2 {
+          &::before {
+            @extend %listStyle;
+            border: 3px solid #FF8373;
+          }
+        }
+        &__3 {
+            &::before {
+            @extend %listStyle;
+            border: 3px solid #A3A0FB;
+          }
         }
       }
     }
