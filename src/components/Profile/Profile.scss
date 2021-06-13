@@ -1,0 +1,90 @@
+$textColor : #CECFD0;
+
+%iconStyleCustom {
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin: 0 1.2em;
+    background-image: url("../../images/icons.png");
+    background-repeat: no-repeat;
+}
+
+.Profile {
+    padding: 1.4em;
+    background-color: white;
+    .Header {
+        text-align: center;
+        margin-bottom: 0.6em;
+        &__Image {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        &__Name {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 4px;
+        }
+        &__Country {
+            color: $textColor;
+            font-size: 15px;
+        }
+    }
+    &__SocialMedia {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $textColor;
+        padding: 1.4em 0;
+    }
+    &__Instagram {
+        @extend %iconStyleCustom;
+        background-position: -176px 0px;
+    }
+    &__Twitter {
+        @extend %iconStyleCustom;
+        background-position: -212px 0px;
+    }
+    &__Facebook {
+        @extend %iconStyleCustom;
+        background-position: -252px 0px;
+    }
+    &__Mail {
+        @extend %iconStyleCustom;
+        background-position: -288px 0px;
+    }
+    .Users {
+        h2 {
+            font-weight: unset; 
+            color: #4D4F5C;
+            font-size: 20px;
+        }
+        .User {
+            display: flex;
+            margin-bottom: 22px;
+            h4 {   
+                margin-top: 0.6em;
+                margin-bottom: 0.2em;
+            }
+            &__Avatar {
+                object-fit: cover;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            }
+            &__Content {
+                margin-left: 0.8em;
+            }
+            &__Address {
+                color: $textColor;
+                display: flex;
+            }
+            &__Country, &__Mobile {
+                font-size: 15px;
+            }
+            &__Country {
+                margin-right: 0.6em;
+            }
+        }
+    }
+}
