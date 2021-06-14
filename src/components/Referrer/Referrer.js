@@ -24,7 +24,7 @@ function Referrer() {
           </tr>
         ))}
       <tr>
-        <td><a className="ShowMore" href="#">Show more</a></td>
+        <td><a className="ShowMore" href="#show">Show more</a></td>
       </tr>
       </table>
     </div>
