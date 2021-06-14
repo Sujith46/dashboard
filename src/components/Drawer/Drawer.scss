@@ -15,19 +15,36 @@ $borderColor : #A3A0FB;
   background-repeat: no-repeat;
 }
 
+%iconStyleCustom {
+    content: "";
+    display: inline-flex;
+    width: 16px;
+    height: 18px;
+    margin-right: 0.6rem;
+    background-image: url("../../images/icons.png");
+    background-repeat: no-repeat;
+}
+
 .Drawer {
-    background-color: $drawerPrimaryColor;
+    background-color: $drawerSecondaryColor;
     color: $drawerFontColor;
     flex: 1;
     // padding: 1em;
+    h1 {
+        margin: 0;
+    }
+    &__Header {
+        background-color: $drawerPrimaryColor;
+        padding: 2.1em 1em;
+    }
     &__Title {
         font-size: 15px;
         letter-spacing: 3px;
-        padding: 1em;
     }
     &__Navigation {
         background-color: $drawerSecondaryColor;
         list-style-type: none;
+        font-size: 15px;
         // padding: 1em;
     }
     .Navigation--item {
@@ -37,13 +54,85 @@ $borderColor : #A3A0FB;
         &__Home {
             padding: 1em;
             &::before {
-                @extend %iconsStyle;
-                background-image: url("../../images/home.png");
+                @extend %iconStyleCustom;
+                background-position: 0px 0px;
             }
             &:hover {
                 background-color: $drawerPrimaryColor;
                 border-left: 4px solid $borderColor;
+                &::before {
+                    @extend %iconStyleCustom;
+                    background-position: 0px -37px;
+                }
             }
         }
+        &__DashBoard {
+            padding: 1em;
+            &::before {
+                @extend %iconStyleCustom;
+                background-position: -36px 0px;
+                
+            }
+            &:hover {
+                background-color: $drawerPrimaryColor;
+                border-left: 4px solid $borderColor;
+                &::before {
+                    @extend %iconStyleCustom;
+                    background-position: -36px -37px;
+                }
+            }
+        }
+        &__Inbox {
+            padding: 1em;
+            position: relative;
+            &::before {
+                @extend %iconStyleCustom;
+                background-position: -72px 0px;
+            }
+            &:hover {
+                background-color: $drawerPrimaryColor;
+                border-left: 4px solid $borderColor;
+                &::before {
+                    @extend %iconStyleCustom;
+                    background-position: -72px -36px;
+                }
+            }
+            .New {
+                font-size: 11px;
+                background-color: #FF4A33;
+                border-radius: 6px;
+                padding: 0 0.6em;
+                position: absolute;
+                right: 30px;
+                bottom: 16px;
+            }
+        }
+        &__Products {
+            padding: 1em;
+            &::before {
+                @extend %iconStyleCustom;
+                background-position: -108px 0px;
+            }
+            &:hover {
+                background-color: $drawerPrimaryColor;
+                border-left: 4px solid $borderColor;
+                &::before {
+                    @extend %iconStyleCustom;
+                    background-position: -108px -37px;
+                }
+            }
+        }
+    }
+}
+
+.Drawer {
+    @media only screen and (max-width: 480px) {
+        display: none;
+    }
+     @media only screen and (min-width: 481px) and (max-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        display: none;
     }
 }

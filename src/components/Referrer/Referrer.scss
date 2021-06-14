@@ -6,16 +6,30 @@
     }
     .Table {
         width: 100%;
+        font-size: 13px;
         &__Header {
             text-align: left;
             background-color: #F5F6FA;
             padding: 1em;
             th {
                 padding: 1em;
+                text-transform: uppercase;
+                color: #A3A6B4;
             }
         }
         td {
             padding: 1em;
+            color: #4D4F5C;
         }
+        .ShowMore {
+            text-decoration: none;
+            color: #3B86FF;
+        }
+    }
+}
+
+.Referrer {
+    @media only screen and (max-width: 480px) {
+        overflow: auto;
     }
 }

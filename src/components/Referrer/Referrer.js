@@ -4,7 +4,7 @@ import './Referrer.scss';
 
 function Referrer() {
   return (
-    <div className="Referrer">
+    <div className="Referrer BoxShadow">
     <h3>Referrer</h3>
       <table className="Table">
         <tr className="Table__Header">
@@ -23,6 +23,9 @@ function Referrer() {
             <td>{data.total}</td>
           </tr>
         ))}
+      <tr>
+        <td><a className="ShowMore" href="#">Show more</a></td>
+      </tr>
       </table>
     </div>
   );

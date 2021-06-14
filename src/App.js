@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from './components/Container/Container';
+import Drawer from './components/Drawer/Drawer';
+import ContentContainer from './components/Container/ContentContainer/ContentContainer';
+import NavBar from './components/NavBar/NavBar';
+import OverviewContainer from './components/Container/OverviewContainer/OverviewContainer';
+import Statistics from './components/Statistics/Statistics';
+import Sales from './components/Sales/Sales';
+import Referrer from './components/Referrer/Referrer';
+import Profile from './components/Profile/Profile';
+import Video from './components/Video/Video';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Drawer/>
+      <ContentContainer>
+        <NavBar/>
+        <OverviewContainer>
+          <div className="HeaderContainer">
+            <h2 className="Overview--heading">Overview</h2>
+            <button className="Button">Add funds<span className="Button__Icon"></span></button>
+          </div>
+          <div className="BoxesContainer">
+            <div className="BoxesContainer__Left">
+              <div className="ChartsContainer">
+                <Statistics />
+                <Sales />
+              </div>
+              <div className="TableContainer">
+                <Referrer />
+              </div>
+            </div>
+            <div className="BoxesContainer__Right">
+              <Profile />
+              <Video />
+            </div>
+          </div>
+        </OverviewContainer>
+      </ContentContainer>
+    </Container>
   );
 }
 

@@ -59,8 +59,20 @@ $textColor : #CECFD0;
             color: #4D4F5C;
             font-size: 20px;
         }
+        &__Header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__DotIcon {
+            @extend %iconStyleCustom;
+            width: 50px;
+            margin: 0;
+            background-position: -322px -44px;
+        }
         .User {
             display: flex;
+            align-items: flex-end;
             margin-bottom: 22px;
             h4 {   
                 margin-top: 0.6em;

@@ -9,10 +9,10 @@ export const Sales = [
   },
   {
     name: "Italy",
-    value: "Italy",
+    value: "5530 Sales",
   },
   {
     name: "Italy",
-    value: "Italy",
+    value: "7405 Sales",
   },
 ];

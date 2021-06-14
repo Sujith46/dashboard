@@ -61,3 +61,18 @@
     }
   }
 }
+
+.Sales {
+  @media only screen and (max-width: 480px) {
+    margin-right: 0;
+    margin-bottom: 0.8em;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    margin-right: 0;
+    margin-top: 0.8em;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    margin-right: 0;
+    margin-top: 0.8em;
+  }
+}

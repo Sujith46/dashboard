@@ -1,0 +1,9 @@
+.PieChart {
+    position: relative;
+    &__Center {
+        position: absolute;
+        top: 45%;
+        left: 43%;
+        text-align: center;
+    }
+}

@@ -1,14 +1,14 @@
 import React from 'react'
 import ProfileAvatar from '../../images/avatars/JanaNavakova.jpg';
 import UserOne from '../../images/avatars/DrewJames.png';
-import UserTwo from '../../images/avatars/DavidKames.png';
+import UserTwo from '../../images/avatars/Davidkames.png';
 import UserThree from '../../images/avatars/LavidEmes.png';
 
 import './Profile.scss'
 
 function Profile() {
     return (
-        <div className="Profile">
+        <div className="Profile BoxShadow">
             <div className="Header">
                 <img className="Header__Image" src={ProfileAvatar} alt="profile-avatar"></img>
                 <h4 className="Header__Name">Nick Herasimenka</h4>

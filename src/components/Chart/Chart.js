@@ -1,25 +1,26 @@
-import React from 'react'
-import { Line } from 'react-chartjs-2'
-
+import React from "react";
+import { Line } from "react-chartjs-2";
 
 const data = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   datasets: [
     {
-      label: "First dataset",
+      label: "Product sold",
       data: [33, 53, 85, 41, 44, 65],
       fill: true,
-      backgroundColor: "rgba(75,192,192,0.2)",
-      borderColor: "rgba(75,192,192,1)",
+      backgroundColor: "rgba(84,216,255,0.2)",
+      borderColor: "rgba(84,216,255,1)",
       lineTension: 0.4,
     },
-    // {
-    //   label: "Second dataset",
-    //   data: [33, 25, 35, 51, 54, 76],
-    //   fill: false,
-    //   borderColor: "#742774"
-    // }
-  ]
+    {
+      label: "Total views",
+      data: [33, 25, 35, 51, 54, 76],
+      fill: true,
+      backgroundColor: "rgba(163,160,251,0.2)",
+      borderColor: "rgba(163,160,251,1)",
+      lineTension: 0.4,
+    }
+  ],
 };
 
 // const colors = ["#78ce90", "#b977ce", "#fac76e", "#de4d4d"];
@@ -54,21 +55,31 @@ const data = {
 //   ]
 // };
 
-const getOptions = {
-    // legend: {
-    //   display: true,
-    //   position: "right"
-    // },
+const options = {
+    legend: {
+      display: true,
+      position: "bottom",
+    },
+    scaleOverride: true,
+    scaleSteps: 20,
     scales: {
+         r: {
+            ticks: {
+              backdropPadding: {
+                  x: 10,
+                  y: 20
+              }
+            }
+        },
       yAxes: [
         {
-          scaleLabel: {
-            display: true
-          },
-          ticks: {
-            display: true ,
-            minRotation: 0
-          }
+          // scaleLabel: {
+          //   display: true
+          // },
+          // ticks: {
+          //   display: true ,
+          //   minRotation: 0
+          // }
         }
       ],
       xAxes: [
@@ -76,24 +87,22 @@ const getOptions = {
           gridLines: {
             display: false
           },
-          scaleLabel: {
-            display: true
-          },
-          ticks: {
-            display: true,
-            minRotation: 90
-          }
+          // scaleLabel: {
+          //   display: true
+          // },
+          // ticks: {
+          //   display: true,
+          //   minRotation: 90
+          // }
         }
       ]
     }
 };
 
 function Chart() {
-    return (
-        <div className="LineChart">
-            <Line data={data} options={getOptions}/>
-        </div>
-    )
+  return (
+      <Line data={data} options={options} />
+  );
 }
 
-export default Chart
+export default Chart;

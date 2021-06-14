@@ -74,3 +74,16 @@ $navigationSecondaryColor : white;
     @extend %menuStyle;
     background-position: -370px 0px;
 }
+
+@media only screen and (max-width: 480px) {
+.NavigationContainer {
+    .Navigation {
+            &__MenuIcon {
+                flex: 1;
+            }
+            .NavigationSearch {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+$buttonColor: #6763e3;
+$headingColor: #43425d;
+
+.OverviewContainer {
+  padding: 1em 6.4em;
+  .HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.8em 0;
+  }
+  .Overview--heading {
+    color: $headingColor;
+    margin: 0;
+    font-size: 28px;
+    font-weight: unset;
+  }
+
+  .Button {
+    background-color: $buttonColor;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0.8em 1em;
+    &__Icon {
+      display: block;
+      background: url("../../../images/icons.png") no-repeat;
+      background-position: -326px 0px;
+      width: 25px;
+      height: 20px;
+      margin-left: 2em;
+    }
+  }
+  .BoxesContainer {
+    display: flex;
+    &__Left, &__Right {
+      flex: 1;
+    }
+    .ChartsContainer {
+      display: flex;
+      .Statistics, .SalesDistribution {
+        flex: 1;
+      }
+    }
+    .TableContainer {
+      margin-top: 2em;
+      margin-right: 0.8em;
+    }
+  }
+}
+
+.OverviewContainer {
+  @media only screen and (max-width: 480px) {
+    padding: 1em 0.6em;
+    .BoxesContainer {
+      flex-direction: column-reverse;
+      &__Right {
+        margin-top: 0.8em;
+      }
+      .ChartsContainer {
+        flex-direction: column;
+      }
+      .TableContainer {
+        margin-right: 0;
+      }
+    }
+    .Statistics {
+      margin-bottom: 0.8em;
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    padding: 1em 2.4em;
+    .BoxesContainer {
+      flex-direction: column-reverse;
+      .ChartsContainer {
+        flex-direction: column;
+      }
+      .TableContainer {
+        margin-right: 0;
+        margin-top: 0.8em;
+      }
+    }
+    .Statistics {
+      margin-right: 0;
+      margin-top: 2em;
+    }      
+  }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    padding: 1em 2.4em;
+    .BoxesContainer {
+      flex-direction: column-reverse;
+      .ChartsContainer {
+        flex-direction: column;
+      }
+      .TableContainer {
+        margin-right: 0;
+        margin-top: 0.8em;
+      }
+    }
+    .Statistics {
+      margin-right: 0;
+      margin-top: 2em;
+    }  
+  }
+}

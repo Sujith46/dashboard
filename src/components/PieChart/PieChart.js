@@ -19,6 +19,10 @@ function PieChart() {
     return (
         <div className="PieChart">
             <Doughnut data={data}/>
+            <div className="PieChart__Center">
+                <p>230,990</p>
+                <p>Sales</p>
+            </div>
         </div>
     )
 }
