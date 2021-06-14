@@ -9,7 +9,7 @@ function Statistics() {
             <div className="Statistics__Header">
                 <h3>Statistics</h3>
                 <select className="DateOption">
-                    <option selected value="last 6 months">Last 6 months</option>
+                    <option value="last 6 months">Last 6 months</option>
                 </select>
             </div>
             <div className="LineChart">
